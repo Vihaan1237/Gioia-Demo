@@ -1,0 +1,97 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><meta name="theme-color" content="#9f2428">
+<title>Gioia, Gandipet (DEMO)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@500;800&display=swap" rel="stylesheet">
+<style>
+:root{--cobalt:#a52b30;--lemon:#e7c8a2;--ink:#3b211e;--paper:#fbf4eb;--coral:#bd493d;--sky1:#e6b4a4;--sky2:#f7e6d8;--title:#4a211f;--sun:#f2c58f;--sy:14%;--rosso:#a52b30}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:500 17px/1.65 'Plus Jakarta Sans',system-ui,sans-serif}
+h1,h2,h3{font-family:'DM Serif Display','Plus Jakarta Sans',serif;font-weight:400;margin:0;line-height:1.05}
+:focus-visible{outline:4px solid var(--coral);outline-offset:3px}
+.demo{position:sticky;top:0;z-index:30;background:var(--ink);color:#fff;text-align:center;font-size:13px;font-weight:800;padding:7px 12px}
+.demo b{background:var(--lemon);color:var(--ink);padding:2px 8px;border-radius:4px;margin-right:6px}
+.sky{position:relative;overflow:hidden;min-height:92vh;display:grid;align-content:start;padding:36px 20px 0;background:linear-gradient(180deg,var(--sky1),var(--sky2));transition:background 1s}
+.sun{position:absolute;left:50%;top:var(--sy);width:clamp(110px,24vw,190px);aspect-ratio:1;margin-left:calc(clamp(110px,24vw,190px) / -2);border-radius:50%;background:var(--sun);box-shadow:0 0 0 18px #fff3,0 0 0 40px #fff2;transition:top 1s,background 1s}
+.stars{position:absolute;inset:0;opacity:0;transition:opacity 1s;background:radial-gradient(2px 2px at 12% 18%,#fff,transparent),radial-gradient(2px 2px at 30% 40%,#fff,transparent),radial-gradient(3px 3px at 62% 14%,#fff,transparent),radial-gradient(2px 2px at 82% 34%,#fff,transparent),radial-gradient(2px 2px at 92% 12%,#fff,transparent),radial-gradient(2px 2px at 48% 30%,#fff,transparent)}
+.night .stars{opacity:1}
+.copy{position:relative;z-index:2;text-align:center;max-width:720px;margin:0 auto;padding-top:clamp(120px,24vw,220px)}
+.hi{margin:0 0 6px;font-weight:800;color:var(--title)}
+h1{font-size:clamp(76px,22vw,200px);color:var(--title);letter-spacing:-.01em;text-shadow:4px 4px 0 var(--shadow,#ffd84a)}
+.tag{font-size:clamp(18px,3vw,24px);font-weight:800;color:var(--title);margin:10px 0 22px}
+.wave{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:auto;display:block}
+.picker{position:relative;z-index:2;display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin:18px 0 0}
+.t{font:800 14px 'Plus Jakarta Sans',sans-serif;min-height:40px;padding:6px 16px;border-radius:99px;border:2px solid var(--ink);background:#fff;color:var(--ink);cursor:pointer}
+.t[aria-pressed=true]{background:var(--ink);color:#fff}
+.btn{display:inline-block;padding:13px 26px;border-radius:99px;border:3px solid var(--ink);background:var(--lemon);color:var(--ink);font:800 16px 'Plus Jakarta Sans',sans-serif;text-decoration:none;cursor:pointer;margin:4px 6px}
+.btn:hover{background:#fff}.btn.sw{background:#e6b04d}.btn.zo{background:#a52b30;color:#fff}.btn.zo:hover{background:#a8161f}
+section{max-width:1000px;margin:0 auto;padding:clamp(48px,8vw,90px) 20px}
+h2{font-size:clamp(32px,6vw,54px);color:var(--cobalt);margin-bottom:12px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 20px}
+.tab{font:800 15px 'Plus Jakarta Sans',sans-serif;min-height:44px;padding:8px 18px;border:3px solid var(--ink);border-radius:99px;background:#fff;color:var(--ink);cursor:pointer}
+.tab[aria-pressed=true]{background:#a52b30;color:#fff;border-color:#a52b30}
+.items{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.it{background:#fff;border:3px solid var(--ink);border-radius:22px;padding:18px 20px}
+.it:nth-child(3n+1){background:#fff6c9}.it:nth-child(3n+2){background:#e3edff}
+.it h3{font-size:22px;color:var(--ink);margin-bottom:4px}.it p{margin:0;font-size:15px}
+.note{font-size:14px;margin-top:16px;opacity:.85}
+.find{background:#a52b30;color:#fff;max-width:none;text-align:center}
+.find .in{max-width:640px;margin:0 auto}.find h2{color:var(--lemon)}
+.find .btn{border-color:#fff}.find .btn.ghost{background:none;color:#fff}.find .btn.ghost:hover{background:#fff;color:var(--ink)}
+footer{background:var(--ink);color:#fff;font-size:14px;padding:22px 20px;text-align:center}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.sky,.sun,.stars{transition:none}}
+</style></head><body>
+<div class="demo"><b>DEMO</b>Concept site by Vihaan. Not the official website of Gioia.</div>
+
+<header class="sky" id="sky"><div class="stars" aria-hidden="true"></div><div class="sun" aria-hidden="true"></div>
+ <div class="copy"><p class="hi" id="hi">Hello from Gandipet</p><h1>Gioia</h1>
+  <p class="tag">Joy, The Italian Way.</p>
+  <a class="btn" href="#menu">See the menu</a><a class="btn" href="#find">Find us</a>
+  <div class="picker" id="picker" role="group" aria-label="Preview the sky at a time of day"></div></div>
+ <svg class="wave" viewBox="0 0 1440 220" preserveAspectRatio="none" aria-hidden="true"><path d="M0 110C180 40 360 40 540 100S900 170 1080 100 1320 40 1440 80V220H0Z" fill="#a52b30" opacity=".35"/><path d="M0 150C200 90 380 90 580 140S940 200 1120 140 1330 100 1440 130V220H0Z" fill="#fbf4eb"/></svg>
+</header>
+
+<section id="menu"><h2>Pick Your Joy</h2>
+ <p>Coffee, something sweet and a little Italian spirit. Explore the sample menu.</p>
+ <div class="tabs" id="tabs" role="group" aria-label="Menu section"></div>
+ <div class="items" id="items" aria-live="polite"></div>
+ <p class="note">Sample menu to show the layout.</p></section>
+
+<section class="find" id="find"><div class="in"><h2>Find Us In Gandipet</h2>
+ <p>Gandipet, Hyderabad. Address, hours and contact details to be Added.</p>
+ 
+ <a class="btn sw" href="https://www.swiggy.com/city/hyderabad/gandipet-order-online" target="_blank" rel="noopener">Order on Swiggy</a>
+ <a class="btn zo" href="https://www.zomato.com/hyderabad" target="_blank" rel="noopener">Order on Zomato</a><br>
+ <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=Gioia+Gandipet+Hyderabad" target="_blank" rel="noopener">Get directions</a>
+ <a class="btn ghost" href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></div></section>
+
+<footer>DEMO concept by Vihaan for Gioia.</footer>
+
+<script>
+(function(){
+var P={
+ dawn:{n:"Dawn",a:"#f0c7ad",b:"#f9e6d4",sy:"62%",sun:"#f7d7a7",title:"#542522",sh:"#ffffff88",hi:"Buongiorno from Gandipet"},
+ day:{n:"Day",a:"#e6b4a4",b:"#f7e6d8",sy:"14%",sun:"#f2c58f",title:"#542522",sh:"#e7c8a2",hi:"Buona giornata from Gandipet"},
+ golden:{n:"Golden hour",a:"#bd6654",b:"#6e3434",sy:"58%",sun:"#f2c58f",title:"#fff8ef",sh:"#54252266",hi:"Buona sera from Gandipet"},
+ night:{n:"Night",a:"#3a2528",b:"#6b3434",sy:"20%",sun:"#f1dfc8",title:"#fff8ef",sh:"#00000066",hi:"Buona notte from Gandipet"}};
+var sky=document.getElementById('sky'),r=document.documentElement.style,cur='';
+function set(k,manual){var p=P[k];cur=k;
+ sky.style.setProperty('--sky1',p.a);sky.style.setProperty('--sky2',p.b);sky.style.setProperty('--sy',p.sy);sky.style.setProperty('--sun',p.sun);
+ sky.style.setProperty('--title',p.title);sky.style.setProperty('--shadow',p.sh);sky.classList.toggle('night',k==='night');
+ document.getElementById('hi').textContent=p.hi;
+ [].forEach.call(document.querySelectorAll('.t'),function(b){b.setAttribute('aria-pressed',b.dataset.k===k)})}
+var h=+new Intl.DateTimeFormat('en-GB',{hour:'numeric',hour12:false,timeZone:'Asia/Kolkata'}).format(new Date())%24;
+var now=h>=5&&h<8?'dawn':h>=8&&h<16?'day':h>=16&&h<19?'golden':'night';
+document.getElementById('picker').innerHTML=Object.keys(P).map(function(k){return '<button class="t" data-k="'+k+'" aria-pressed="false">'+P[k].n+'</button>'}).join('');
+document.getElementById('picker').addEventListener('click',function(e){var b=e.target.closest('.t');if(b)set(b.dataset.k,true)});
+set(now);
+var M={"Coffee":[["Espresso","A short, strong shot."],["Flat white","Silky and smooth."],["Cappuccino","Espresso, steamed milk and foam."],["Pour-over","Clean and bright, brewed by hand."]],
+ "Cold and fizzy":[["Iced latte","Espresso over cold milk and ice."],["Cold brew","Slow-steeped and mellow."],["Espresso tonic","Bright, bubbly and refreshing."]],
+ "Bites":[["Croissant","Flaky and buttery."],["Toasties","Warm, melty and simple."],["Cake of the day","Ask what is fresh."]]},tab="Coffee";
+function draw(){document.getElementById('tabs').innerHTML=Object.keys(M).map(function(k){return '<button class="tab" data-k="'+k+'" aria-pressed="'+(k===tab)+'">'+k+'</button>'}).join('');
+ document.getElementById('items').innerHTML=M[tab].map(function(i){return '<div class="it"><h3>'+i[0]+'</h3><p>'+i[1]+'</p></div>'}).join('')}
+document.getElementById('tabs').addEventListener('click',function(e){var b=e.target.closest('.tab');if(b){tab=b.dataset.k;draw()}});
+draw();
+})();
+</script>
+</body></html>
